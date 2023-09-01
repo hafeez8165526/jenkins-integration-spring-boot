@@ -12,7 +12,6 @@ phases:
   build:
     commands:
       - echo "Build"
-      - echo "Entered build phase"
       - echo "Building Java"
       - cd  Jenkins-Test-M1
       - mvn -DskipTests clean package
