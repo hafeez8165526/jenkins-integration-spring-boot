@@ -8,6 +8,6 @@ public class EmpController {
 	
 	@GetMapping("test")
 	public String test() {
-		return "<h1>hello hai 106 git chnage again</h1>";
+		return "<h1>hello hai 107 git chnage again</h1>";
 	}
 }
