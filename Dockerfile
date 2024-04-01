@@ -1,4 +1,4 @@
-FROM maven:3.5-jdk-8-alpine
-RUN dir
-RUN mvn clean install 
-RUN mvn package
+FROM openjdk:17-jdk-slim
+EXPOSE 9091
+COPY target/Jenkins-Test-M1-0.0.1-SNAPSHOT.war Jenkins-Test-M1-0.0.1.war
+ENTRYPOINT ["java","-jar","/Jenkins-Test-M1-0.0.1.war"]

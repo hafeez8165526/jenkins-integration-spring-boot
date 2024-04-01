@@ -1,25 +1,27 @@
-version: 0.2
-
-phases:
-  install:
-    runtime-versions:
-      java: corretto8
-      docker: 18
-  pre_build:
-    commands:
-      - echo "Pre_build"
-      - echo "Logging in to Amazon ECR"
-  build:
-    commands:
-      - echo "Build"
-      - echo "Building Java"
-      - cd  Jenkins-Test-M1
-      - mvn -DskipTests clean package
-      - docker build -t Jenkins-Test-M1-registry:latest .
-      - docker tag Jenkins-Test-M1-registry:latest Jenkins-Test-M1-registry:latest:v1
-
-  post_build:
-    commands:
-      - echo "Post_build"
-      - docker run Jenkins-Test-M1-registry:latest:Jenkins-Test-M1-registry:latest:v1
-
+#version: '0.2'
+#
+#phases:
+#  install:
+#    runtime-versions:
+#      java: corretto8
+#      docker: 18
+#  pre_build:
+#    commands:
+#      - echo "Pre_build"
+#      - echo "Logging in to Amazon ECR"
+#  build:
+#    commands:
+#      - echo "Build"
+#      - echo "Building Java"
+#      - cd  Jenkins-Test-M1
+#      - mvn -DskipTests clean package
+#      - docker build -t Jenkins-Test-M1-registry:latest .
+#      - docker tag Jenkins-Test-M1-registry:latest Jenkins-Test-M1-registry:latest:v1
+#
+#  post_build:
+#    commands:
+#      - echo "Post_build"
+#      - docker run Jenkins-Test-M1-registry:latest:Jenkins-Test-M1-registry:latest:v1
+#
+#
+#
