@@ -11,7 +11,7 @@
 	<groupId>com.hafeez</groupId>
 	<artifactId>Jenkins-Test-M1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>Jenkins-Test-M1</name>
 	<description>Test Application for microservices</description>
 	<properties>
